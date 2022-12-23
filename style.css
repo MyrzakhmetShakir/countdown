@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Nunito:wght@500&display=swap');
+/* font-family: 'Gentium Book Basic', serif;
+font-family: 'Nunito', sans-serif; */
+
+:root {
+    --sserif: 'Gentium Book Basic', serif;
+    --ssans: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: hidden;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.video-background {
+   position: fixed;
+   right: 0;
+   top: 0;
+   width: 100vw;
+   height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .video-background {
+        position: fixed;
+        top: 0;
+        left:-500px;
+        width: auto;
+        height: 100vh;
+     }
+}
+
+
+.video-overlay {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.container {
+    position: fixed;
+    top: 30%;
+    left:28%;
+    width: 40%;
+    height: auto;
+    padding: 15px;
+    background-color: rgb(70, 12, 104, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.choose {
+    width: 70%;
+}
+
+h1 {
+    color:white;
+    font-family: var(--sserif);
+    text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--ssans);
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 5px 20px;
+    background-color: rgb(203, 28, 141);
+    color: white;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: var(--ssans);
+    font-weight: 600;
+}
+
+
+
+/* COUNTDOWN */
+
+
+ul {
+    padding: 0;
+    text-align: center;
+}
+
+span {
+    display: block;
+    font-size: 65px;
+}
+
+li {
+    font-family: var(--ssans);
+    display: inline-block;
+    list-style: none;
+    color:white;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+        left:2.5%;
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    span {
+        font-size: 30px;
+    }
+
+    li {
+        font-size: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (min-width:1000px) and (max-width:1800px) {
+    .video-background {
+        position: fixed;
+        top: 0;
+        left:0;
+        width: auto;
+        height: 100vh;
+     }
+}
+
+
+/* COMPLETE  */
+
+.complete-title {
+    animation: colorf 4s ease infinite;
+}
+
+@keyframes colorf {
+    0% {
+        color:yellow;
+        
+    }
+    25% {
+        color:rgb(13, 236, 13);
+    }
+    50% {
+        color:red;
+        transform: scale(1.18);
+    }
+    75% {
+        color: white;
+    }
+    100% {
+        color:aqua;
+        
+    }
+
+    
+}

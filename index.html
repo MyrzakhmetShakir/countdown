@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <link rel="icon" type="image/png" href="clock.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <video class="video-background" muted loop autoplay>
+        <source src="clickcc.mp4"></video>
+    </video>
+    <div class="video-overlay">
+    <div class="container">
+        <div class="choose" >
+            <h1 class="theme">Create Custom CountDown</h1>
+            <form action="">
+                <label for="title">Title</label><br>
+                <input type="text" required
+                       name="title" 
+                       id="title" 
+                       placeholder="What are you counting down to?"
+                       autocomplete> <br>
+                <label for="data-picker">Select a Date</label> <br>
+                <input type="date" id = "data-picker"> <br>
+                <button type="submit" class = "submitButton">submit</button>
+            </form>
+        </div>
+       
+        <div class="countdown" hidden>
+            <h1 class="title-text">Title text here</h1>
+            <ul>
+                <li><span>0 </span>Days </li>
+                <li><span>0 </span>Hours </li>
+                <li><span>0 </span>Minutes </li>
+                <li><span>0 </span>Seconds </li>
+            </ul>
+            <button id="countdown">Reset</button>
+        </div>
+
+        <div class="complete" hidden>
+            <h1 class="complete-title">CountDown Complete!</h1>
+            <h1 class="complete-info">CountDown finised on 05-05-2022</h1>
+            <button class="newcount">New CountDown</button>
+        </div>
+        <p style="color:aliceblue">&#169; Myrzakhmet Shakir </p>
+    </div>
+    
+    
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
