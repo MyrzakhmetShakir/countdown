@@ -21,7 +21,7 @@ function reset() {
     textInp.value = ""; dateInp.value = "";
     inputContainer.hidden = false;
     storage = "";
-    localStorage.removeItem("data1");
+    localStorage.removeItem("sdata");
 }
 
 function setCountDown(setDate, setText) {
@@ -49,7 +49,7 @@ function setComplete(setDate, setText) {
     completeContainer.hidden = false;
 }
 
-let isInStorageData = localStorage.getItem("data1");
+let isInStorageData = localStorage.getItem("sdata");
 if(isInStorageData !== null) {
     let arr = isInStorageData.split(",");
     new Date(arr[0]) - new Date() > 0 
@@ -61,7 +61,7 @@ if(isInStorageData !== null) {
 submitButton.addEventListener('click', (event)=>{
     event.preventDefault();
     storage = [dateInp.value, textInp.value];
-    localStorage.setItem("data1", storage)
+    localStorage.setItem("sdata", storage)
     new Date(dateInp.value) - new Date() > 0
         ? setCountDown(dateInp.value, textInp.value)
         : setComplete(dateInp.value, textInp.value)
